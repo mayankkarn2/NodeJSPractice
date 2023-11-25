@@ -41,16 +41,9 @@ readFilePro(`${__dirname}/dog.txt`)
     superagent
       .get(`https://dog.ceo/api/breed/${data}/images/random`)
       .then((res) => {
-        writeFilePromise(res.body.message)
-          .then(() => {
-            console.log(`Data Written`);
-          })
-          .catch((err) => {
-            console.log(err);
-          });
-      })
-      .catch((err) => {
-        console.log(err.message);
+        writeFilePromise(res.body.message).then(() => {
+          console.log(`Data Written`);
+        });
       });
   })
   .catch((err) => {
