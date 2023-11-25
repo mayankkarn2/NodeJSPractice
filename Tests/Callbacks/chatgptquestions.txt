@@ -1,0 +1,7 @@
+Here's the scenario:
+
+Fetch User Data:
+
+Create a function fetchUserData that takes a user ID and a callback function.
+Simulate fetching user data from a database (you can use a hardcoded object for simplicity).
+Invoke the callback function with the user data once it's fetched.
