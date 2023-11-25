@@ -35,6 +35,8 @@ const writeFilePromise = (file) => {
 };
 
 readFilePro(`${__dirname}/dog.txt`)
+  // A Promises ("then and catch") usually ensures that it will return something upon it's execution, for example, when the api called
+  // is successfully made to the Dog CEO end point, "then" part will be written, else "catch" will be run.
   .then((data) => {
     superagent
       .get(`https://dog.ceo/api/breed/${data}/images/random`)
