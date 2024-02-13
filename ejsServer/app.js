@@ -27,8 +27,12 @@ app.get('/', (req, res) => {
     res.render('index');
 });
 
+
+// In the contact page, if you want to send some data such as email, you can send this data in the render method
+// res.render('ejs_file', {data:you_want_to_send}). In your views > contact.ejs file, you can set the place you want
+// to use this email as <% = email %>
 app.get('/contact', (req, res) => {
-    res.render('contact');
+    res.render('contact', { "email": "abc@xyz.com" });
 });
 
 app.listen(3000);
