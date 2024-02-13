@@ -20,13 +20,21 @@ app.use(function (req, res, next) {
     next();
 })
 
+// GET route
 app.get('/', function (req, res) {
     console.log("From /")
     res.send('Hello From /');
 })
 
+// GET route
 app.get('/profile', function (req, res) {
     console.log("From /profile")
     res.send('Hello from profile');
+})
+
+// Dynamic Get Route
+app.get('/profile/:username', function (req, res) {
+    console.log('From a user profile');
+    res.send('Hello from a user profile');
 })
 app.listen(3000);
