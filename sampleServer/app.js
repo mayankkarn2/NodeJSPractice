@@ -32,9 +32,10 @@ app.get('/profile', function (req, res) {
     res.send('Hello from profile');
 })
 
-// Dynamic Get Route
+// Dynamic GET Route - Dynamic routes are given in /:username, where :username is called params. It can be accessed
+// by req.params.username
 app.get('/profile/:username', function (req, res) {
     console.log('From a user profile');
-    res.send('Hello from a user profile');
+    res.send(`Hello from ${req.params.username}'s profile`);
 })
 app.listen(3000);
