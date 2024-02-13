@@ -1,0 +1,11 @@
+{
+  "name": "getfilesize",
+  "version": "1.0.0",
+  "description": "Get File Size Using Callbacks",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mayank Karn",
+  "license": "ISC"
+}

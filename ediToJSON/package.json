@@ -1,0 +1,15 @@
+{
+  "name": "editojson",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mayank Karn",
+  "license": "ISC",
+  "dependencies": {
+    "edi": "^1.1.0",
+    "edi-parser": "^1.0.1"
+  }
+}

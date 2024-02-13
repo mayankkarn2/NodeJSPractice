@@ -1,0 +1,69 @@
+VCAP_SERVICES: {
+    "hana": [
+        {
+            "binding_guid": "fa41e33f-cd70-4588-877a-d2c88ff97c8d",
+            "binding_name": null,
+            "credentials": {
+                "certificate": "-----BEGIN CERTIFICATE-----\nMIIDrzCCApegAwIBAgIQCDvgVpBCRrGhdWrJWZHHSjANBgkqhkiG9w0BAQUFADBh\nMQswCQYDVQQGEwJVUzEVMBMGA1UEChMMRGlnaUNlcnQgSW5jMRkwFwYDVQQLExB3\nd3cuZGlnaWNlcnQuY29tMSAwHgYDVQQDExdEaWdpQ2VydCBHbG9iYWwgUm9vdCBD\nQTAeFw0wNjExMTAwMDAwMDBaFw0zMTExMTAwMDAwMDBaMGExCzAJBgNVBAYTAlVT\nMRUwEwYDVQQKEwxEaWdpQ2VydCBJbmMxGTAXBgNVBAsTEHd3dy5kaWdpY2VydC5j\nb20xIDAeBgNVBAMTF0RpZ2lDZXJ0IEdsb2JhbCBSb290IENBMIIBIjANBgkqhkiG\n9w0BAQEFAAOCAQ8AMIIBCgKCAQEA4jvhEXLeqKTTo1eqUKKPC3eQyaKl7hLOllsB\nCSDMAZOnTjC3U/dDxGkAV53ijSLdhwZAAIEJzs4bg7/fzTtxRuLWZscFs3YnFo97\nnh6Vfe63SKMI2tavegw5BmV/Sl0fvBf4q77uKNd0f3p4mVmFaG5cIzJLv07A6Fpt\n43C/dxC//AH2hdmoRBBYMql1GNXRor5H4idq9Joz+EkIYIvUX7Q6hL+hqkpMfT7P\nT19sdl6gSzeRntwi5m3OFBqOasv+zbMUZBfHWymeMr/y7vrTC0LUq7dBMtoM1O/4\ngdW7jVg/tRvoSSiicNoxBN33shbyTApOB6jtSj1etX+jkMOvJwIDAQABo2MwYTAO\nBgNVHQ8BAf8EBAMCAYYwDwYDVR0TAQH/BAUwAwEB/zAdBgNVHQ4EFgQUA95QNVbR\nTLtm8KPiGxvDl7I90VUwHwYDVR0jBBgwFoAUA95QNVbRTLtm8KPiGxvDl7I90VUw\nDQYJKoZIhvcNAQEFBQADggEBAMucN6pIExIK+t1EnE9SsPTfrgT1eXkIoyQY/Esr\nhMAtudXH/vTBH1jLuG2cenTnmCmrEbXjcKChzUyImZOMkXDiqw8cvpOp/2PV5Adg\n06O/nVsJ8dWO41P0jmP6P6fbtGbfYmbW0W5BjfIttep3Sp+dWOIrWcBAI+0tKIJF\nPnlUkiaY4IBIqDfv8NZ5YBberOgOzW6sRBc4L0na4UU+Krk2U886UAb3LujEV0ls\nYSEY1QSteDwsOoBrp+uvFRTp2InBuThs4pFsiv9kuXclVzDAGySj4dzp30d8tbQk\nCAUw7C29C79Fv1C5qfPrmAESrciIxpg0X40KPMbp1ZWVbd4=\n-----END CERTIFICATE-----",
+                "database_id": "76e9f125-00d8-41bf-abd9-80b46ca7cfe0",
+                "driver": "com.sap.db.jdbc.Driver",
+                "hdi_password": "In1rKn-xPauAmwchDmQYnMob5zZMBg8Qh-kOPu1ZpzXTIghri9oo.0l1YUByehsNpmm71Fd0kDmmQJnS9vC4S7XRrT5cx1ph4y9QZ-Lo3vL-nGKb2x-othhWdfqG71Lr",
+                "hdi_user": "BE0340C330D84329AF98C4CA00019F67_72G51C8KSWEQBVPIKRHDADMAH_DT",
+                "host": "76e9f125-00d8-41bf-abd9-80b46ca7cfe0.hana.trial-us10.hanacloud.ondemand.com",
+                "password": "Pa81chDCP0Ly2erbmwBZzK-NY0svhiS26dEC39HDGMI-RUEpI642gdiXvSqEmEeCnTGkZj8RbX6OCKXZr9kjgoomuyz.7s-cKeJ2RPPWt7sV1YuuCkFbWAi0hate3WY_",
+                "port": "443",
+                "schema": "BE0340C330D84329AF98C4CA00019F67",
+                "url": "jdbc:sap://76e9f125-00d8-41bf-abd9-80b46ca7cfe0.hana.trial-us10.hanacloud.ondemand.com:443?encrypt=true&validateCertificate=true&currentschema=BE0340C330D84329AF98C4CA00019F67",
+                "user": "BE0340C330D84329AF98C4CA00019F67_72G51C8KSWEQBVPIKRHDADMAH_RT"
+            },
+            "instance_guid": "b43464ed-6957-4d9d-9c92-657d2293368f",
+            "instance_name": "bookshop-db",
+            "label": "hana",
+            "name": "bookshop-db",
+            "plan": "hdi-shared",
+            "provider": null,
+            "syslog_drain_url": null,
+            "tags": [
+                "hana",
+                "database",
+                "relational"
+            ],
+            "volume_mounts": []
+        }
+    ],
+    "xsuaa": [
+        {
+            "binding_guid": "d8b87628-4636-4e0b-aafa-f5a71bc034f3",
+            "binding_name": null,
+            "credentials": {
+                "apiurl": "https://api.authentication.us10.hana.ondemand.com",
+                "clientid": "sb-bookshop-cf2cbfe4trial-MySpace!t243379",
+                "clientsecret": "CUlJEXbacAOmuoKxPHrCQIemrvc=",
+                "credential-type": "instance-secret",
+                "identityzone": "cf2cbfe4trial",
+                "identityzoneid": "6e152d3e-f25f-4cd0-a939-f59b2caaf9f1",
+                "sburl": "https://internal-xsuaa.authentication.us10.hana.ondemand.com",
+                "serviceInstanceId": "2d73a951-5c4d-4f36-8006-5ae14dd92558",
+                "subaccountid": "6e152d3e-f25f-4cd0-a939-f59b2caaf9f1",
+                "tenantid": "6e152d3e-f25f-4cd0-a939-f59b2caaf9f1",
+                "tenantmode": "dedicated",
+                "uaadomain": "authentication.us10.hana.ondemand.com",
+                "url": "https://cf2cbfe4trial.authentication.us10.hana.ondemand.com",
+                "verificationkey": "-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAuUnR9v4wpQxv0yEDai3A\n5eutBAeEneJTKz5ef3tkYQJyof2EkyL48dKfaCTDhRdpMXhNOnySGgQLlOgUKowL\n8dOPA8UScrVdqvaeM1vyv7bEkNaz12Ry3tf/HGEm12KjE+vdN09sUF0w83jcn30h\nQWLC93xz1GjD4aBoa2wJeprI5k7UXgAZgYn6R+PCur/mGI4lse1DOXiVEw569Uem\nju53HRffJe+Z90MQ+BIHl0z3f8TKhizZ1Q0UMYJiazMVgv4T0aGXMk8Jltq+xYEQ\nZYwiJmwMmYswtEoe7t+gf8ptrlSc8gPA97/qVBNSBt3AQZvRGTtnj0No41l+psiU\nJQIDAQAB\n-----END PUBLIC KEY-----",
+                "xsappname": "bookshop-cf2cbfe4trial-MySpace!t243379",
+                "zoneid": "6e152d3e-f25f-4cd0-a939-f59b2caaf9f1"
+            },
+            "instance_guid": "2d73a951-5c4d-4f36-8006-5ae14dd92558",
+            "instance_name": "bookshop-auth",
+            "label": "xsuaa",
+            "name": "bookshop-auth",
+            "plan": "application",
+            "provider": null,
+            "syslog_drain_url": null,
+            "tags": [
+                "xsuaa"
+            ],
+            "volume_mounts": []
+        }
+    ]
+}
