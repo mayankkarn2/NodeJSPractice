@@ -39,3 +39,8 @@ app.get('/profile/:username', function (req, res) {
     res.send(`Hello from ${req.params.username}'s profile`);
 })
 app.listen(3000);
+
+// ejs is HTML with where you can do JavaScript inside HTML
+
+
+
