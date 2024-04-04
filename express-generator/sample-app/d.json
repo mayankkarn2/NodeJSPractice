@@ -1,0 +1,141 @@
+{
+    "name": "SerializationV1",
+    "version": "1.0.0",
+    "description": "A simple CAP project.",
+    "repository": "<Add your repository here>",
+    "license": "UNLICENSED",
+    "private": true,
+    "dependencies": {
+        "@npmcli/move-file": "^3.0.0",
+        "@sap-cloud-sdk/http-client": "^2.6.0",
+        "@sap/cds": "^6.0.4",
+        "@sap/cds-odata-v2-adapter-proxy": "^1.8.5",
+        "@sap/hana-client": "^2.17.22",
+        "@sap/hdbext": "^7.7.6",
+        "@sap/hdi-deploy": "^4.8.0",
+        "@sap/xssec": "^3.2.13",
+        "axios": "^1.3.3",
+        "body-parser": "^1.20.1",
+        "cfenv": "^1.2.4",
+        "cors": "^2.8.5",
+        "express": "^4.18.2",
+        "fs": "^0.0.1-security",
+        "hdb": "^0.18.3",
+        "http": "^0.0.1-security",
+        "nodejs-base64-converter": "^1.0.5",
+        "passport": "^0.5.2",
+        "sap-hdbext-promisfied": "^2.202201.1"
+    },
+    "devDependencies": {
+        "@types/cfenv": "^1.2.3",
+        "sqlite3": "^5.1.6"
+    },
+    "engines": {
+        "node": "^18"
+    },
+    "scripts": {
+        "start": "cds run",
+        "undeploy": "cf undeploy SerializationV1 --delete-services --delete-service-keys"
+    },
+    "eslintConfig": {
+        "extends": "eslint:recommended",
+        "env": {
+            "es2020": true,
+            "node": true,
+            "jest": true,
+            "mocha": true
+        },
+        "globals": {
+            "SELECT": true,
+            "INSERT": true,
+            "UPDATE": true,
+            "DELETE": true,
+            "CREATE": true,
+            "DROP": true,
+            "CDL": true,
+            "CQL": true,
+            "CXL": true,
+            "cds": true
+        },
+        "rules": {
+            "no-console": "off",
+            "require-atomic-updates": "off"
+        }
+    },
+    "cds": {
+        "requires": {
+            "db": {
+                "kind": "hana",
+                "pool": {
+                    "max": 200,
+                    "min": 50,
+                    "idleTimeoutMillis": 30000,
+                    "acquireTimeoutMillis": 10000
+                }
+            },
+            "uaa": {
+                "kind": "xsuaa",
+                "credentials": {}
+            },
+            "POValidate": {
+                "kind": "odata-v2",
+                "model": "srv/external/POValidate",
+                "credentials": {
+                    "destination": "S4Sand_BasicAuth"
+                }
+            },
+            "PO_Validation_Metadata": {
+                "kind": "odata-v2",
+                "model": "srv/external/PO_Validation_Metadata",
+                "credentials": {
+                    "destination": "S4_BasicAuth"
+                }
+            },
+            "PO_Validation_Metadata_1": {
+                "kind": "odata-v2",
+                "model": "srv/external/PO_Validation_Metadata_1",
+                "credentials": {
+                    "destination": "S4_BasicAuth"
+                }
+            },
+            "BOM_Validation": {
+                "kind": "odata-v2",
+                "model": "srv/external/BOM_Validation",
+                "credentials": {
+                    "destination": "S4_BasicAuth"
+                }
+            },
+            "BOM_VALIDATE": {
+                "kind": "odata-v2",
+                "model": "srv/external/BOM_VALIDATE",
+                "credentials": {
+                    "destination": "S4_BasicAuth"
+                }
+            },
+            "POValidata_1": {
+                "kind": "odata-v2",
+                "model": "srv/external/POValidata_1",
+                "credentials": {
+                    "destination": "S4_BasicAuth"
+                }
+            },
+            "PO_ValidateNew": {
+                "kind": "odata-v2",
+                "model": "srv/external/PO_ValidateNew",
+                "credentials": {
+                    "destination": "S4_BasicAuth"
+                }
+            },
+            "PO_Validation_Metadata_2": {
+                "kind": "odata-v2",
+                "model": "srv/external/PO_Validation_Metadata_2",
+                "credentials": {
+                    "destination": "S4_BasicAuth"
+                }
+            }
+        },
+        "hana": {
+            "deploy-format": "hdbtable"
+        }
+    }
+}
